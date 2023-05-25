@@ -1,2 +1,1 @@
-# Gradebook-Integration
-Scripts and programs to integrate GitHub Classroom with a Standards-Based Gradebook on Google Sheets and Slack Workspace. 
+This project aims to streamline the process of submitting code reviews in GitHubClassroom and entering points earned into student gradebooks in Google Sheets, as well as updating students on their assignment grades via Slack. To make use of this in your classroom, you will need to first input the GitHub usernames and names of your students in 'names.csv'. 
