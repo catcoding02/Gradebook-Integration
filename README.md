@@ -3,7 +3,7 @@ This project aims to streamline the process of submitting code reviews in GitHub
 # Comment Format
 A properly-formatted comment looks like: 
   
-  *Addition: -0.9 Great job, but next time, add all of the values together.*
+\t**Addition: -0.9 Great job, but next time, add all of the values together.**
   
 In the above example, the student is being graded on the `Addition` standard, and had -0.9 points deducted from the standard for their mistake. 
 
