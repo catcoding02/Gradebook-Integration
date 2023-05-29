@@ -3,7 +3,7 @@ This project aims to streamline the process of submitting code reviews in GitHub
 # Before You Begin
 To make use of this in your classroom, you will need to first input the GitHub usernames and names of your students in `student_info.csv`. You will also need to provide the standards your course is graded on in `standards.csv`. Lastly, you also will have to set up a service account to allow Python to communicate with the Google Sheets API. Follow the gspread documentation [here](https://docs.gspread.org/en/v5.1.0/oauth2.html#enable-api-access-for-a-project) to edit the program code in `functions.py` to your account and JSON file. 
 
-Then, leave comments as normal on your students' work. See the included example gradebook for tips on formatting to make this program and scripts run smoothly. Note that this program detects comments on standards and points-earned based on keywords, so a comment should be prefixed by &lt;YOUR STANDARD NAME HERE>. Add any points deducted immediately after the standard keyword. 
+After these actions have been completed, you can leave comments as normal on your students' assignments. See the included example gradebook for tips on formatting to make this program and scripts run smoothly. Note that this program detects comments on standards and points-earned based on keywords, so a comment should be prefixed by &lt;YOUR STANDARD NAME HERE>. Add any points deducted immediately after the standard keyword. 
 
 # Comment Format
 A properly-formatted comment looks like: 
