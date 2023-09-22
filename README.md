@@ -50,6 +50,50 @@ As you can see from the template Gradebook provided in the guide, different assi
 
 ## Setting Up Your Google Sheets Gradebook
 Follow [this link](https://medium.com/@lledwards/google-sheets-gradebook-guide-integrating-github-google-sheets-and-slack-cf70b109f3db) to my Medium article that details how to set up a Google Sheets Gradebook that can interact with this program and Slack, if you wish. Templates and examples are provided.
+
+# Running the Program
+If you have set everything up correctly, running the program is easy! You will be prompted to enter the assignment name upon running. Be sure to enter the name of the assignment exactly as it is named in GitHub classroom, which is also the same name of the folder containing the `standards_points_row.csv`. 
+
+The program will print a statement, but not stop, if a student's lab repository is not found in your accessible repositories. This occurs if a student does not accept an assignment or has incorrectly joined your classroom. 
+
+The below section will go into detail about how to format your comments on GitHub so the program can detect any deductions on standards that you have indicated in your summary comment on a student's assignment:
+
+## GUIDE TO PROPER GITHUB COMMENT
+
+The Python Program utilizes keywords in order to detect when a student has lost points on a standard. These standards come from the standards stored in the first column of your assignment's `standards_points_row.csv` file. It is best practice to leave ONE comment at the end of a student's lab that contains overall comments and points lost for all relevant standards. Only include standards where points have been lost in this overall comment. 
+
+The comment should be formatted as follows:
+
+"[standard1]: -[number] <comment>
+[standard2]: -[number] <comment>
+[standard3]: -[number] <comment>
+[standard4]: -[number] <comment>"
+
+**IMPORTANT**
+
+> You must type a standard EXACTLY (capitalization, spaces, etc.) as you have typed it in your `standards_points_row.csv` file.
+
+> You must also indicate the points lost in the format <number>.<number>, with a decimal place! So if a student has lost 2 points, you must write "-2.0", not "-2". 
+
+For example, if a student has lost 0.9 points on the 'Mapping' standard, lost 0.3 on the 'Visualization Context' standard, and -1.0 points on the "Data Ethics" standard, there must be only ONE comment on their GitHub feedback which is formatted as follows:
+
+"Mapping: -0.9. You need to improve your mapping skills.
+Visualization Context: -0.3 Please improve the colors on your graphs.
+Data Ethics: -1.0 You did not answer the question for this standard in Example 9."
+
+Note that other comments can be left, as long as they do not include the "[standard1]: -[number]" format. Again, best practice would be that once comments have been left on a lab's contents, ONE overall comment should be left for relevant standards at the end of the lab so the overall points lost per standard can be recorded. 
+
+Let's say a student has incorrect mapping techniques at Lines 9, 20, and 120 on a lab. You can leave comments at all of these lines of code correcting the student, such as "This map has the wrong color!" Or "This map should be zoomed in more." Then, at the end of the lab, your one overall comment for the Mapping standard would be something such as:
+
+"Mapping: -0.4. Please address the comments about your maps left in Line 9, 20, and 120."
+
+# Conclusion
+
+This concludes the README file for the program. If you have any questions, please reach out to lledwards@smith.edu. Thank you!
+
+
+
+
  
 # Sources
 Credit to [Ben Collins](https://www.benlcollins.com/spreadsheets/marking-template/) for providing guidance on Slack integration with Google Sheets in a gradebook context.
