@@ -36,10 +36,20 @@ You will see you have downloaded a blank CSV called `student_info.csv`.
 
 **In the first column, `GitHub Username`, paste a student's GitHub username.**
 
-**In the second column, `Student Name`, paste a student's name.** This name should match the name of their gradebook in Google Sheets. For example, if a student's gradebook in Google Sheets is `John Smith Gradebook`, the name you should paste in this column is `John Smith`. **IMPORTANT** Each student's gradebook should be named in the format "`<name>` Gradebook." Setting up your Google Sheets file is covered in-detail in my Medium article linked [here](link). 
+**In the second column, `Student Name`, paste a student's name.** This name should match the name of their gradebook in Google Sheets. For example, if a student's gradebook in Google Sheets is `John Smith Gradebook`, the name you should paste in this column is `John Smith`. **IMPORTANT** Each student's gradebook should be named in the format "`<name>` Gradebook." Setting up your Google Sheets file is covered in-detail in my Medium article linked [here](https://medium.com/@lledwards/google-sheets-gradebook-guide-integrating-github-google-sheets-and-slack-cf70b109f3db). 
 
 ## standards_points_row.csv
 For each assignment you assign your students, you will create a new `standards_points_row.csv` file. A template is provided for you. For each assignment, in the same directory that contains the code for the program, create a new folder on your local machine that shares the same name of the assignment name on GitHub Classroom. So, if the assignment on GitHub Classroom is called `Lab1`, create a folder called `Lab1`.  Then, create a new CSV file called `standards_points_row.csv` in this folder. You must do this for **EVERY** individual assignment. 
 
+**In the first column of this CSV file, paste a standard that this assignment is evaluating.**
+
+**In the second column of this CSV file, paste the number of points that a student can earn on this standard for this assignment.**
+
+**COME BACK TO THIS STEP AFTER SETTING UP YOUR GOOGLE SHEETS GRADEBOOK** 
+As you can see from the template Gradebook provided in the guide, different assignments have information stored in different rows under the different standards. In the third column of this CSV file, paste the row that corresponds to the information for the standard for this assignment in a student's Google Sheets Gradebook.
+
+## Setting Up Your Google Sheets Gradebook
+Follow [this link](https://medium.com/@lledwards/google-sheets-gradebook-guide-integrating-github-google-sheets-and-slack-cf70b109f3db) to my Medium article that details how to set up a Google Sheets Gradebook that can interact with this program. Templates and examples are provided.
+ 
 # Sources
 Credit to [Ben Collins](https://www.benlcollins.com/spreadsheets/marking-template/) for providing guidance on Slack integration with Google Sheets in a gradebook context.
