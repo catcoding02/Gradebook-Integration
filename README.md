@@ -73,7 +73,7 @@ The comment should be formatted as follows:
 [standard4]: -[number] [comment]"
 
 
-**IMPORTANT**
+!!!**IMPORTANT**!!!
 
 > You must type a standard EXACTLY (capitalization, spaces, etc.) as you have typed it in your `standards_points_row.csv` file.
 
