@@ -8,7 +8,7 @@ To make use of this in your classroom, you need to fill in some of the blank CSV
 Before you set up anything else, you will have to set up a service account to allow Python to communicate with the Google Sheets API and your Google account. Here are the directions, taken from the gspread documentation linked [here](https://docs.gspread.org/en/v5.1.0/oauth2.html#enable-api-access-for-a-project). 
 
 > A service account is a special type of Google account intended to represent a non-human user that needs to authenticate and be authorized to access data in Google APIs. 
->  1.  [Enable API Access for a Project](https://docs.gspread.org/en/v5.1.0/oauth2.html#enable-api-access)  if you haven’t done it yet.
+> 1.  [Enable API Access for a Project](https://docs.gspread.org/en/v5.1.0/oauth2.html#enable-api-access)  if you haven’t done it yet.
 > 2. Go to “APIs & Services > Credentials” and choose “Create credentials > Service account key”.
 > 3. Fill out the form
 > 4. Click “Create” and “Done”.
