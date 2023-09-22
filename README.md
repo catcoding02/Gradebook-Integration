@@ -46,7 +46,7 @@ For each assignment you assign your students, you will create a new `standards_p
 **In the second column of this CSV file, paste the number of points that a student can earn on this standard for this assignment.**
 
 **!COME BACK TO THIS STEP AFTER SETTING UP YOUR GOOGLE SHEETS GRADEBOOK!** 
-As you can see from the template Gradebook provided in the guide, different assignments have information stored in different rows under the different standards. In the third column of this CSV file, paste the row that corresponds to the information for the standard for this assignment in a student's Google Sheets Gradebook.
+As you can see from the template Gradebook provided in the guide, different assignments have information stored in different rows under the different standards. **In the third column of this CSV file, paste the row that corresponds to the information for the standard for this assignment in a student's Google Sheets Gradebook.**
 
 ## Setting Up Your Google Sheets Gradebook
 Follow [this link](https://medium.com/@lledwards/google-sheets-gradebook-guide-integrating-github-google-sheets-and-slack-cf70b109f3db) to my Medium article that details how to set up a Google Sheets Gradebook that can interact with this program. Templates and examples are provided.
