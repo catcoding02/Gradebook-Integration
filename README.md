@@ -64,13 +64,13 @@ The Python Program utilizes keywords in order to detect when a student has lost 
 
 The comment should be formatted as follows:
 
-"[standard1]: -[number] /<comment/>
+"[standard1]: -[number] [comment]
 
-[standard2]: -[number] /<comment/>
+[standard2]: -[number] [comment]
 
-[standard3]: -[number] /<comment/>
+[standard3]: -[number] [comment]
 
-[standard4]: -[number] /<comment/>"
+[standard4]: -[number] [comment]"
 
 
 **IMPORTANT**
