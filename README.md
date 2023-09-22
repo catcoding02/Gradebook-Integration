@@ -58,7 +58,7 @@ The program will print a statement, but not stop, if a student's lab repository 
 
 The below section will go into detail about how to format your comments on GitHub so the program can detect any deductions on standards that you have indicated in your summary comment on a student's assignment:
 
-## GUIDE TO PROPER GITHUB COMMENT
+## Guide to Proper GitHub Comments
 
 The Python Program utilizes keywords in order to detect when a student has lost points on a standard. These standards come from the standards stored in the first column of your assignment's `standards_points_row.csv` file. It is best practice to leave ONE comment at the end of a student's lab that contains overall comments and points lost for all relevant standards. Only include standards where points have been lost in this overall comment. 
 
