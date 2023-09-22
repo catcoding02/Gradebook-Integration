@@ -82,7 +82,9 @@ The comment should be formatted as follows:
 For example, if a student has lost 0.9 points on the 'Mapping' standard, lost 0.3 on the 'Visualization Context' standard, and -1.0 points on the "Data Ethics" standard, there must be only ONE comment on their GitHub feedback which is formatted as follows:
 
 "Mapping: -0.9. You need to improve your mapping skills.
+
 Visualization Context: -0.3 Please improve the colors on your graphs.
+
 Data Ethics: -1.0 You did not answer the question for this standard in Example 9."
 
 Note that other comments can be left, as long as they do not include the "[standard1]: -[number]" format. Again, best practice would be that once comments have been left on a lab's contents, ONE overall comment should be left for relevant standards at the end of the lab so the overall points lost per standard can be recorded. 
