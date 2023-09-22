@@ -9,7 +9,7 @@ Before you set up anything else, you will have to set up a service account to al
 
 > A service account is a special type of Google account intended to represent a non-human user that needs to authenticate and be authorized to access data in Google APIs. 
 >  1.  [Enable API Access for a Project](https://docs.gspread.org/en/v5.1.0/oauth2.html#enable-api-access)  if you haven’t done it yet.
-> 2. 1.  Go to “APIs & Services > Credentials” and choose “Create credentials > Service account key”.
+> 2. Go to “APIs & Services > Credentials” and choose “Create credentials > Service account key”.
 > 3. Fill out the form
 > 4. Click “Create” and “Done”.
 > 5. Press “Manage service accounts” above Service Accounts.
