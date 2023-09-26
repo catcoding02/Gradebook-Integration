@@ -45,7 +45,7 @@ In the case that the assignment is a mini project, you will need to create an ad
 
 Similarly to your student_info.csv,
 
-**In the first column, `Group_Name`, paste the group name as found by looking at the repository title on the GitHub assignment as seen [here](README_imgs/mp_title.png).** 
+**In the first column, `Group_Name`, paste the group name as found by looking at the repository title on the GitHub assignment as seen [here](README_imgs/mp_repo.png).** 
 
 So, for this example image, in the `Group_Name` column, you would paste `mp1-group3`
 
