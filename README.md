@@ -24,7 +24,7 @@ You will see you have downloaded a blank CSV called `instructor_info.csv`.
 **In the first column, `Github_Access_Token`, of this CSV file, you will paste your GitHub Access Token.** Instructions for the creation of a GitHub Access Token can be found [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens). This access token allows the program access to your GitHub account and all of the repositories you have access to. 
 
 **In the second column, `Classroom_Name`, of this CSV file, you will paste your classroom's name.** Go into GitHub Classroom and click on your classroom. On the top of the page, you will see something like the following image:
-![Example of GitHub Classroom Title](https://imgur.com/a/0UAkNTa)
+![Example of GitHub Classroom Title](README_imgs/classroom_title)
 Notice the smaller, grey text below the bold Classroom Title, `sds192fall2023` in this example. **THIS** text is your classroom's name, which you will paste in the second column of the CSV file. 
 
 **In the third column, `JSON_Access_File`, of this CSV file, you will paste the name of the JSON Access file you created and put into your directory.** So, if the name of your JSON Access file is `stats-classroom.json`, you would paste `stats-classroom`. 
