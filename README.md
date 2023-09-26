@@ -25,6 +25,7 @@ You will see you have downloaded a blank CSV called `instructor_info.csv`.
 
 **In the second column, `Classroom_Name`, of this CSV file, you will paste your classroom's name.** Go into GitHub Classroom and click on your classroom. On the top of the page, you will see something like the following image:
 ![Example of GitHub Classroom Title](README_imgs/classroom_title.png)
+
 Notice the smaller, grey text below the bold Classroom Title, `sds192fall2023` in this example. **THIS** text is your classroom's name, which you will paste in the second column of the CSV file. 
 
 **In the third column, `JSON_Access_File`, of this CSV file, you will paste the name of the JSON Access file you created and put into your directory.** So, if the name of your JSON Access file is `stats-classroom.json`, you would paste `stats-classroom`. 
@@ -44,7 +45,9 @@ In the case that the assignment is a mini project, you will need to create an ad
 
 Similarly to your student_info.csv,
 
-**In the first column, `Group_Name`, paste the group name as found by looking at the repository title on the GitHub assignment as seen [here](README_imgs/mp_title.png).** So, for this example image, in the `Group_Name` column, you would paste `mp1-group3`
+**In the first column, `Group_Name`, paste the group name as found by looking at the repository title on the GitHub assignment as seen [here](README_imgs/mp_title.png).** 
+
+So, for this example image, in the `Group_Name` column, you would paste `mp1-group3`
 
 
 ## standards_points_row.csv
