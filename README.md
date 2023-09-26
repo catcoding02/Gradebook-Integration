@@ -24,7 +24,7 @@ You will see you have downloaded a blank CSV called `instructor_info.csv`.
 **In the first column, `Github_Access_Token`, of this CSV file, you will paste your GitHub Access Token.** Instructions for the creation of a GitHub Access Token can be found [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens). This access token allows the program access to your GitHub account and all of the repositories you have access to. 
 
 **In the second column, `Classroom_Name`, of this CSV file, you will paste your classroom's name.** Go into GitHub Classroom and click on your classroom. On the top of the page, you will see something like the following image:
-![Example of GitHub Classroom Title](README_imgs/classroom_title)
+![Example of GitHub Classroom Title](README_imgs/classroom_title.png)
 Notice the smaller, grey text below the bold Classroom Title, `sds192fall2023` in this example. **THIS** text is your classroom's name, which you will paste in the second column of the CSV file. 
 
 **In the third column, `JSON_Access_File`, of this CSV file, you will paste the name of the JSON Access file you created and put into your directory.** So, if the name of your JSON Access file is `stats-classroom.json`, you would paste `stats-classroom`. 
@@ -37,6 +37,15 @@ You will see you have downloaded a blank CSV called `student_info.csv`.
 **In the first column, `GitHub Username`, paste a student's GitHub username.**
 
 **In the second column, `Student Name`, paste a student's name.** This name should match the name of their gradebook in Google Sheets. For example, if a student's gradebook in Google Sheets is `John Smith Gradebook`, the name you should paste in this column is `John Smith`. **IMPORTANT** Each student's gradebook should be named in the format "`<name>` Gradebook." Setting up your Google Sheets file is covered in-detail in my Medium article linked [here](https://medium.com/@lledwards/google-sheets-gradebook-guide-integrating-github-google-sheets-and-slack-cf70b109f3db). 
+
+### SPECIAL CASE: Mini-Projects 
+
+In the case that the assignment is a mini project, you will need to create an additional information CSV file within the assignment folder titled "[assignment_name]_group_info.csv". See the example found in `mp_group_info.csv`. 
+
+Similarly to your student_info.csv,
+
+**In the first column, `Group_Name`, paste the group name as found by looking at the repository title on the GitHub assignment as seen [here](README_imgs/mp_title.png).** So, for this example image, in the `Group_Name` column, you would paste `mp1-group3`
+
 
 ## standards_points_row.csv
 For each assignment you assign your students, you will create a new `standards_points_row.csv` file. A template is provided for you. For each assignment, in the same directory that contains the code for the program, create a new folder on your local machine that shares the same name of the assignment name on GitHub Classroom. So, if the assignment on GitHub Classroom is called `Lab1`, create a folder called `Lab1`.  Then, create a new CSV file called `standards_points_row.csv` in this folder. You must do this for **EVERY** individual assignment. 
