@@ -3,6 +3,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import gspread
 import re
 import csv
+import time
 
 class InfoCollector():
     """
@@ -76,7 +77,6 @@ class InfoCollector():
                     except:
                         break
                 mp_group_names_and_student_names_dict[row[0]] = group_list
-        print(mp_group_names_and_student_names_dict)
         return mp_group_names_and_student_names_dict
 
     def standards_points_row(self, lab_name):
@@ -118,7 +118,7 @@ class InfoCollector():
             """
             # student_item may be individual student or groups of students
             for student_item in list(repos_and_stud_names.values()):
-                if len(student_item) == 1:
+                if isinstance(student_item, str):
                     worksheet_name_list.append(f"{student_item} Gradebook")
                 elif len(student_item) > 1:
                     for index, student in enumerate(student_item):
@@ -135,7 +135,6 @@ class InfoCollector():
         # generates dict of lab repo (key) and worksheet name (value) pairs for students
         for index,repo_name in enumerate(assignment_repo_list):
             assignment_repo_and_worksheet_pair_dict[assignment_repo_list[index]] = worksheet_names[index]
-        print(assignment_repo_and_worksheet_pair_dict)
         return assignment_repo_and_worksheet_pair_dict
 
 class CommentCollector():
@@ -157,8 +156,15 @@ class CommentCollector():
                 del lab_repo_and_worksheet_pair_dict[lab_repo]
                 continue
         # returned validated lab_repo_and_worksheet_pair_dict
-        print(lab_repo_and_worksheet_pair_dict)
         return lab_repo_and_worksheet_pair_dict
+
+    def slow_api_call(self, func):
+        for i in range(0, 10):
+            try:
+                return func
+            except Exception as e:
+                print(e)
+                time.sleep(2 ** i)
 
     def get_comments(self, lab_repo_and_worksheet_pair_dict_validated: dict, ghat: str, classroom_name: str, spr_dict: dict, sheet):
         """
@@ -179,10 +185,12 @@ class CommentCollector():
             lab_sheet = sheet.worksheet(f"{lab_repo_and_worksheet_pair_dict_validated[lab_repo]}")
             if lab_repo_pr.totalCount > 0:
                 for i in lab_repo_pr:
+                    print(i.body)
                     standards_list = list(spr_dict.keys())
                     points_deducted_list = re.findall(": -\d+\.\d+", i.body)
                     for standard in standards_list:
                         if standard in i.body:
+                            time.sleep(2)
                             # clears any previous special case comments
                             lab_sheet.update_acell(f'G{spr_dict["Special"][1]}', "")
                             # if standard is found in the body of comment, then am able to extract the provided information about that standard
@@ -203,11 +211,12 @@ class CommentCollector():
                             lab_sheet.update_acell(f'G{points_row_info[1]}', f'{i_cleaned}')
                         # addresses special case if student work receives no comments and is complete
                         elif "Complete: " in i.body:
+                            time.sleep(2)
                             i_cleaned = i.body.replace("Complete: ", "")
-                            print(i_cleaned)
                             lab_sheet.update_acell(f'G{spr_dict["Special"][1]}', f"RECEIVED: {i_cleaned}")
                         # addresses special case if student commits a blank lab
                         elif "Blank: " in i.body:
+                            time.sleep(2)
                             i_cleaned = i.body.replace("Blank: ", "")
                             lab_sheet.update_acell(f'G{spr_dict["Special"][1]}', f"IMPORTANT: {i_cleaned}")
             # if lab_repo_pr.totalCount = 0, there are no comments to be found on a student's lab, and they must have committed nothing
@@ -239,6 +248,7 @@ class CommentCollector():
                         points_deducted_list = re.findall(": -\d+\.\d+", i.body)
                         for standard in standards_list:
                             if standard in i.body:
+                                time.sleep(2)
                                 # clears any previous special case comments
                                 lab_sheet.update_acell(f'G{spr_dict["Special"][1]}', "")
                                 # if standard is found in the body of comment, then am able to extract the provided information about that standard
@@ -259,15 +269,18 @@ class CommentCollector():
                                 lab_sheet.update_acell(f'G{points_row_info[1]}', f'{i_cleaned}')
                             # addresses special case if student work receives no comments and is complete
                             elif "Complete: " in i.body:
+                                time.sleep(2)
                                 i_cleaned = i.body.replace("Complete: ", "")
                                 print(i_cleaned)
                                 lab_sheet.update_acell(f'G{spr_dict["Special"][1]}', f"RECEIVED: {i_cleaned}")
                             # addresses special case if student commits a blank lab
                             elif "Blank: " in i.body:
+                                time.sleep(2)
                                 i_cleaned = i.body.replace("Blank: ", "")
                                 lab_sheet.update_acell(f'G{spr_dict["Special"][1]}', f"IMPORTANT: {i_cleaned}")
                 # if lab_repo_pr.totalCount = 0, there are no comments to be found on a student's lab, and they must have committed nothing
                 else:
+                    time.sleep(2)
                     lab_sheet.update_acell(f'G{spr_dict["Special"][1]}',
                                            f"IMPORTANT: No commit to comment on. Please submit lab ASAP!")
 
