@@ -316,7 +316,10 @@ def main():
         repos_and_stud_names = IC.github_usernames_and_student_names()
     assignment_repo_and_worksheet_pair_dict = IC.assignment_repo_and_worksheet_pair_generator(assignment_name, repos_and_stud_names)
     assignment_repo_and_worksheet_pair_dict_val = CC.validate_repo(ghat, classroom_name, assignment_repo_and_worksheet_pair_dict)
-    CC.get_comments(assignment_repo_and_worksheet_pair_dict_val, ghat, classroom_name, spr_dict, sheet)
+    if mp_status == "Y":
+        CC.get_mp_comments(assignment_repo_and_worksheet_pair_dict_val, ghat, classroom_name, spr_dict, sheet)
+    elif mp_status == "N":
+        CC.get_comments(assignment_repo_and_worksheet_pair_dict_val, ghat, classroom_name, spr_dict, sheet)
 
 
 
